@@ -1,0 +1,521 @@
+﻿/*
+ * Copyright 2012-2013 inBloom, Inc. and its affiliates.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#txtRandomNumInGroup{
+	width:80px;
+	background-color: #8EB4E3;
+	height:30px;
+	margin-top:10px;
+}
+
+.hide-button {
+    float: right;
+    margin-top: -33px;
+    font-size: 11px;
+    font-family: helvetica;
+    color: gray;
+    display: none;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+/**********************
+ * COMMON
+ *********************/
+#group-selection {
+    color: #7F7F7F;
+    min-width:1280px;
+}
+
+.details-section-title {	
+	margin-bottom: 0.5em;
+	border-bottom: 0.15em solid #B9B7B7;
+	padding-bottom: 0.6em;
+}
+
+#group-selection {
+    opacity: 0.5;
+}
+
+/**********************
+ * TOP BAR
+ *********************/
+.top-bar-controls {
+    margin-bottom:0;
+    padding-bottom: 0.2em;
+	width:auto;
+    background: #D7E4BD;
+    box-shadow: 0.5em 0.35em 1.0em #9C9C9C;
+    min-width:1280px;
+}
+
+#studentsBtnGrp {
+    margin-top: 0.4em;
+    padding-left: 0.5em;
+}
+
+#group-search-txt {
+    width: 70%;
+}
+
+.group-search-clear-btn {
+    width:20%;
+}
+
+.num-groups-create-txt {
+    width:40%;
+}
+
+#create-groups-btn {
+    width: 15%;
+}
+
+#edit-multiple-groups-btn, .group-search-btn, .group-search-clear-btn, #create-groups-btn {
+    box-shadow: -0.05em 0.15em 0.4em #6B6B6B;
+    margin-top: 0px !important;
+}
+
+#search-student-icon {
+    width: 1.5em;
+    position: absolute;
+    margin-left: -2.5em;
+    margin-top: 0.3em;
+    cursor: pointer;
+}
+
+.group-search-btn {
+    margin-left: 0.3em;
+    margin-right:0.4em;
+}
+
+.top-bar-title {
+	color:white;
+	text-align: center;
+}
+
+.add-group-btn {
+	width: 2.4em;
+}
+
+#help-btn {
+    color:white;
+    width:2.1em;
+    margin-right:0.4em;
+    cursor:pointer;
+}
+
+#create-groups-ctrls {
+    margin-top: 0.35em;
+    float:right;
+}
+
+.topbar-txt {
+    margin: 0 0.4em 0 0.3em !important;
+}
+
+#logout-btn {
+    cursor:pointer;
+    color:white;
+    width:100%;
+    margin-right:0.4em;
+}
+
+/**********************
+ * Main Content
+ *********************/
+.main-content {
+	position:relative;
+	background-color: #F2F2F2;
+}
+
+.group-details {
+	padding-top: 0.5em;
+    padding-right:0.2em;
+	height:99%;
+    position:relative;
+}
+
+/**********************
+ * GROUP SECTION LIST
+ *********************/
+.group-section-div {
+	padding-top: 1em;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border: 4px solid #FFF;
+    border-right: 0;
+	background-color: #FFFFFF;	
+	box-shadow: 0.5em 0em 1.0em #9C9C9C;
+}
+
+.box-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.box, .box .antiscroll-inner {
+        width: 100%;
+        height: 100%;
+        font: 14px Helvetica, Arial;
+      }
+
+/**********************
+ * SECTION
+ *********************/
+.group-section {
+	padding-bottom: 1.5em;
+    width: 100%;
+}
+
+.group-section-title {
+	font-size: large;
+	font-style: italic;
+    padding-bottom: 0.5em;
+    margin: 0em 1.5em 0.8em 1.2em;
+    border-bottom: 0.1em solid #B9B7B7;
+    width:100%;
+}
+
+.group-checkbox {
+	float:left;
+	margin: 0em 0em 0em 1em;
+}
+
+.group-icon {
+	width:1.5em;
+	cursor: pointer;
+}
+
+.group-icon.group-print-icon {
+    width:1.68em;
+}
+
+.group-icon.group-delete-icon {
+	width:0.92em;
+}
+
+.group-modified-timestamp {
+	float:right;
+	font-size:smaller;
+	font-style: italic;
+}
+
+/**********************
+ * STUDENT
+ *********************/
+.dropped-elem {
+	box-shadow: 0.3em 0.5em 1em #6B6B6B;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	background-color: #FFFFFF;
+	border:1px solid #CCC;	
+	font-size: smaller;
+
+	display:inline-block;
+	margin:0.5em 0.8em 0.8em 0em;	
+	position:relative;
+	width: 16.5em;
+	min-height:4em;
+	border-radius:0.8em;
+}
+
+.student-icon-div {
+	float:left;	
+}
+
+.student-icon {
+	width: 3.5em;
+	position:absolute;
+	top: 20%;
+}
+
+
+.dropped-elem .student-full-profile {
+	float:right;   
+    font-size:0.8em;
+    position: absolute;
+    bottom: 0;
+    right: 0.5em;
+	display:none;
+}
+
+.dropped-elem:hover .student-full-profile {
+	display:block;
+}
+
+.dropped-elem .del-button{
+	margin-top:-1.0em;
+	margin-left: -0.5em;
+	width:1.5em;
+    float: left;
+    display:none;
+    position: absolute;
+}
+
+.dropped-elem:hover .del-button {
+    display: inline;
+    cursor:pointer;
+}
+
+.student-name, .student-attributes {
+	margin-left:3.7em;
+}
+
+.student-attributes {
+    margin-bottom: 1em;
+}
+
+/**********************
+ * GROUP
+ *********************/
+.group-list-item {
+	cursor:pointer;	
+    position:relative;
+    width: 100%;
+}
+
+.group-list {
+    width:100%;
+}
+
+.group-container {
+	border: 1px;
+	box-shadow: 0.1em 0.4em 1.5em #6B6B6B;
+	margin: 0em 2em 1.3em 2.7em;
+	padding: 0.5em;
+    padding-left: 2em;
+    width:85%;
+}
+
+.group-container .group-description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.group-title {
+	font-size:1.5em;
+    margin-right: 0.5em;
+}
+
+.group-icon {
+    vertical-align: top;
+    margin-left: 0.4em;
+}
+
+.group-attachment-link {
+    display:none;
+}
+
+.group-indicator-arrow {
+    position:absolute;
+    display:none;
+    left:96%;
+    height:3.0em;
+    z-index:5;
+}
+
+/**********************
+ * GROUP DETAILS
+ *********************/
+.group-details-inner {    
+    padding-right: 2em;
+}
+
+.group-details .group-name {
+	font-size: large;
+	margin-bottom: 0.5em;
+}
+
+.group-name-txt {
+    display:inline;
+}
+
+.group-name-txtarea {
+    border-color: transparent;
+    background-color:transparent;
+    font-size:large;
+    font-style: italic;
+    resize: none;
+    height: 1em;
+    margin-top: 0.5em;
+    overflow: hidden;
+    display:none;
+}
+
+.group-details-btn {
+    width: 1.5em;
+    margin-top: -0.5em;
+    cursor:pointer;
+}
+
+.save-group-icon {
+    width: 1.4em;
+}
+
+.group-description {
+	margin-bottom: 1.5em;
+    font-size: small;
+    word-wrap: break-word;
+}
+
+.group-description-txtarea {    
+    border-color: transparent;
+    background-color:transparent;
+    font-style: italic;
+    resize: none;
+    height: 4em;
+    width: 97%;
+    margin-top: 0.5em;
+    display:none;
+}
+
+.group-details-controls {
+}
+
+#members-div {
+	font-size:large;
+	font-weight:bold;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.member-list {
+	margin-bottom: 2.5em;
+}
+
+.group-more-data, .group-add-student {
+	display:inline-block;
+}
+
+.group-add-student {
+	float:right;
+}
+
+/**********************
+ * LESSON PLAN
+ *********************/
+.group-lesson-plan-top  {
+	padding-bottom: 1.2em;
+}
+
+.group-lesson-plan, .group-lesson-plan-upload {
+	display: inline-block
+}
+
+.group-lesson-plan-upload {
+	float:right;
+}
+
+#group-lesson-plan-title {
+	font-size:large;
+	font-weight:bold;	
+}
+
+.real-upload-txt {
+    position:absolute;
+    top:0;
+    left:0em;
+
+    /* start of transparency styles */
+    opacity:0;
+    -moz-opacity:0;
+    filter:alpha(opacity:0);
+    /* end of transparency styles */
+
+    z-index:2; /* bring the real upload interactivity up front */
+    width:16em !important;
+}
+
+.fake-upload-txt{
+	height:1em;
+	width:15em;
+	background-color:transparent;
+	border-color:white;
+	color:white;
+}
+
+.attachment-img {
+	width: 1.8em;
+}
+
+.fakeupload {
+	display:inline-block;
+    position:relative;
+}
+
+#file_upload {
+    margin-top: 0.5em;
+}
+
+.add-attachment-btn {
+	margin-top: -0.5em;
+}
+
+.group-lesson-plan-bottom {
+	display:none;
+}
+
+.lesson-plan-remove-icon {
+	float:right;
+	width: 1.0em;
+	cursor: pointer;
+}
+
+/**********************
+ * SHOW MORE DATA POPUP
+ *********************/
+#show-more-data-modal {
+	width: 25em;
+    margin-left: -12.5em;
+	color: white;
+	background-color: #92B843;
+    border-radius: 0.8em;
+}
+
+#show-more-data-modal .modal-body{
+	color: white;
+	background-color: #92B843;
+	border-radius: 1em;
+    max-height: 100%;
+}
+
+#modal-attributes-list {
+	list-style:none;
+}
+
+.modal-attributes-list-div {
+    overflow-y:auto;
+}
+
+.modal-attributes-btn-div {
+    text-align: center;
+}
+
+.attribute-list-item {
+    margin-bottom: 0.2em;
+}
+
+.attribute-checkbox {
+    margin-top:-0.15em !important;
+    margin-right:0.2em !important;
+}

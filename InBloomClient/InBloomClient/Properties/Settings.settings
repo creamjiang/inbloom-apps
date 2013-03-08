@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InBloomClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InBloomApiSandboxUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.sandbox.inbloom.org/api/rest/v1/</Value>
+    </Setting>
+    <Setting Name="InBloomApiSandboxSessionUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.sandbox.inbloom.org/api/rest/system/session/</Value>
+    </Setting>
+    <Setting Name="InBloomSandboxUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.sandbox.inbloom.org/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

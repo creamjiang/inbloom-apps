@@ -1,0 +1,12 @@
+packages
+obj
+bin
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp.csproj.user
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp/Web.Debug.config
+/SlcClient/SlcClient/SlcClient.csproj.user
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp.Azure/TeamMnMGroupingWebApp.Azure.ccproj.user
+App_Data
+/SlcClient/SlcClient.v11.suo
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp.v11.suo
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp.Azure
+/TeamMnMGroupingWebApp/TeamMnMGroupingWebApp.Tests

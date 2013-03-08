@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+        <title>Student Grouping Tool - Multiple Groups Edit</title>
+		<link rel="stylesheet" href="~/Content/vendor/select2/css/select2.css" />		
+		<link rel="stylesheet" href="~/Content/vendor/bootstrap/css/bootstrap.min.css" />	
+		<link rel="stylesheet" href="~/Content/vendor/jqplot/css/jquery.jqplot.min.css" />
+        <link rel="stylesheet" href="~/Content/vendor/fileupload/css/jquery.fileupload-ui.css" />
+        <link rel="stylesheet" href="~/Content/vendor/antiscroll/css/antiscroll.css" />
+        <link rel="stylesheet" href="~/Content/css/core.css" />
+		<link rel="stylesheet" href="~/Content/css/multipleGroupsEdit.css" />
+	</head>
+	<body>
+		<div>
+            <div class="inbloom-header row-fluid">
+                <img id="inbloom-logo" src="~/Content/img/inbloom-logo.png" alt="inBloom Logo" />                       
+                <div class="header-title">Multiple Group Edit</div>    
+                <div style="float:right; margin-right:0.5em; margin-top:-0.5em">     
+                    <span id="img-help-btn">help</span>
+			        <span id="logout-btn">log out</span>
+                </div>
+            </div>
+            <div class="row-fluid">                
+                 <div class="span12 top-bar-controls navbar affix-top">                     
+					<div id="studentsBtnGrp" class="span2 btn-group">
+                        <button id="clear-selection-btn" title="Clear student selection" class="student-list-btn btn">clear selection</button>
+						<button id="select-all-btn" title="Select/deselect all students" class="student-list-btn btn btn-danger">select all</button>					 
+					</div>
+					<div class='span10 top-bar-rows'>
+						<div class="span3" style="display:inline; padding-right:2em">
+                            <button id="back-btn" class="btn btn-primary">back</button>
+                            <div class="btn-group" style="float:right;">
+                                <button id="random-btn" title="Assign random groups" class="student-list-btn btn btn-success">random</button>
+						        <div id="random-num-btn" class="btn btn-success">
+                                    <input id='random-num-txt' type='text' placeholder='#'>
+						        </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+							<div class="row-fluid">                                           
+                                <div class="span4">
+							        <div class="row-fluid">
+                                        <div class="span3">
+                                            <button id="add-new-group-btn" class="btn btn-success">+</button>
+                                        </div>
+                                        <div class="span9" style="padding-top:0.5em">
+                                            <span style="margin: 0.5em 0 0 0"> add new group</span>
+                                            <img class="top-bar-divider" src="~/Content/img/divider-icon.png" />
+                                        </div>                                                    
+							        </div>
+                                </div>
+                                <div class="span8">
+                                    <div class="row-fluid">
+                                        <div class="span5">
+                                            <p style="margin: 0.5em 0 0 0; text-align:right"> add an existing group</p>
+                                        </div>
+							            <div class="span6" style="margin-top:0.4em;">
+                                            <select id="find-group-dropdown" data-placeholder="find an existing group">
+								                <option></option>
+							                </select>
+                                        </div>
+                                        <div class="span1">
+							                <button id="add-existing-group-btn" class="btn btn-success">add</button>							
+                                        </div>
+                                    </div>
+                                </div>                                           
+                            </div>
+                        </div>
+                        <div class="span3 top-bar-buttons" >
+							<button id="img-print-btn" class="btn btn-primary">print groups</button>
+							<button id="img-save-btn" class="btn btn-primary">save all</button>
+                        </div>
+                    </div>
+				</div>	
+            </div>
+			<div class="row-fluid main-content">
+					<div class="sidebar span2">
+						<div class="row-fluid sidebar-row">
+                            				
+						    <div id="studentListDiv" class="span12">							
+                                <div id="searchBox">
+							        <input id="txtStudentSearchBox" placeholder="search by name" />
+                                    <img id="search-student-icon" src="~/Content/img/search-icon.png" />
+						        </div>
+                                <div class="box-wrap antiscroll-wrap">
+                                    <div class="box">
+                                        <div class="antiscroll-inner">  
+                                            <div class="box-inner student-list-inner">                                                                     
+							                    <ul id="studentList">
+								
+							                    </ul>
+                                            </div>          
+                                        </div>
+                                    </div>
+                                </div>
+						    </div>
+                       </div>
+					</div>
+					<div class="content span10">
+						<div class="row-fluid content-row">
+                           
+						    <div class="span11 filter-topbar">
+							    <div class="row-fluid">
+                                    <div class="span3">
+								        <select id="filter-attribute" data-placeholder="Filter students by">
+									        <option></option>								
+								        </select>
+                                    </div>
+                                    <div class="span3">
+								        <select id="filter-operator" data-placeholder="comparison">
+									        <option class="filter-operator-default-option"></option>							
+								        </select>
+                                    </div>
+								    <div class="span5">
+                                        <input type="text" id="filter-value"/>
+								        <select id="filter-values" style="display:none" data-placeholder="Choose a value">
+									        <option></option>									
+								        </select>
+								    </div>
+								    <div class="span1">
+                                        <button id="filter-add-btn" class="btn">Add</button>								
+                                    </div>
+							    </div>
+						    </div>						
+						    <div class="span11 select2-container select2-container-multi" style="border: none">
+							    <div class="row-fluid">
+                                    <ul id="selected-filters" class="select2-choices">
+								
+							        </ul>
+                                </div>
+						    </div>
+						    <div class="groups-area">							
+							
+						    </div>
+						</div>
+					</div>
+				</div>
+		    <div class="inbloom-footer row-fluid">
+                <span class="inbloom-trademark">inBloom is a trademark of inBloom, Inc.</span>
+            </div>
+        </div>
+		
+		
+		<!-- -->		
+		<div id="student-info-popover" data-studentContainerId="-1" style="display:none">			
+			<div id="student-attributes">			
+			</div>
+			<div>
+				<div id="student-testScore-chart">
+					
+				</div>
+				<div id="student-learningStyle-chart">
+					
+				</div>
+			</div>
+		</div>
+		
+		<div id="group-unsaved-changes-modal" class="modal hide fade">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Unsaved changes warning</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>Group <span id='group-unsaved-changes-group-name'></span> has unsaved changes. If you remove it these changes will be lost. Continue?</p>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+		    <a href="#" class="btn btn-primary" data-dismiss="modal" id="group-unsaved-changes-confirm-btn">Yes</a>
+		  </div>
+		</div>
+		
+        <div id="save-all-summary" class="modal hide fade">
+            <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Save All Summary</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p id="save-all-summary-content"></p>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn" data-dismiss="modal">Ok</a>		    
+		  </div>
+        </div>
+
+        <div id="user-inactivity-modal" class="modal hide fade">  
+       	    <div class="modal-body">       			    	   		
+	       		<p>
+                       Your session has expired. Please login again.
+	       		</p>
+                   <div class="modal-attributes-btn-div">
+                    <button class="btn user-inactivity-ok" data-dismiss="modal">Login</button>
+                </div>
+       	    </div>
+       </div>
+
+		<!-- Load third part scripts -->
+		<script src="~/Content/vendor/jquery/js/jquery.min.js"> </script>
+		<script src="~/Content/vendor/jqueryui/js/jquery-ui.min.js"> </script>
+		<script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"> </script>
+		<script src="~/Content/vendor/multidraggable/js/jquery.ui.multidraggable.js"> </script>
+		<Script src="~/Content/vendor/underscore/js/underscore.min.js"> </Script>
+		<script src="~/Content/vendor/select2/js/select2.min.js"> </script>
+		<script src="~/Content/vendor/pubsub/js/pubsub.js"> </script>
+        <script src="~/Content/vendor/spin/js/spin.min.js"> </script>
+        <script src="~/Content/vendor/spin/js/jquery.spin.js"> </script>		
+		<script src="~/Content/vendor/jqplot/js/jquery.jqplot.min.js"> </script>
+		<script src="~/Content/vendor/jqplot/js/jqplot.donutRenderer.min.js"> </script>
+		<script src="~/Content/vendor/jqplot/js/jqplot.pieRenderer.min.js"> </script>
+        <script src="~/Content/vendor/idletimer/js/idletimer.js"> </script>
+        <script src="~/Content/vendor/antiscroll/js/jquery-mousewheel.js"> </script>
+        <script src="~/Content/vendor/antiscroll/js/antiscroll.js"> </script>
+		
+         <!-- Fileupload plugins  -->
+        <script src="~/Content/vendor/fileupload/js/jquery.iframe-transport.js"> </script>   
+        <script src="~/Content/vendor/fileupload/js/jquery.fileupload.js"> </script>   
+        <script src="~/Content/vendor/fileupload/js/jquery.fileupload-fp.js"> </script>   
+        <script src="~/Content/vendor/fileupload/js/jquery.fileupload-ui.js"> </script> 
+
+		<!-- Load custom scripts -->
+        <script src="~/Content/js/utils/tooltipText.js"> </script>
+		<script src="~/Content/js/utils/utils.js"> </script>
+
+            <!-- Models -->
+        <script src="~/Content/js/models/studentModel.js"> </script>
+        <script src="~/Content/js/models/groupModel.js"> </script>
+        <script src="~/Content/js/models/groupListModel.js"> </script>
+        <script src="~/Content/js/models/studentFiltersModel.js"> </script>
+
+            <!-- Widgets -->        
+		<script src="~/Content/js/widgets/studentListItemWidget.js"> </script>
+        <script src="~/Content/js/widgets/studentInGroupWidget.js"> </script>
+        <script src="~/Content/js/widgets/groupWidget.js"> </script>
+        <script src="~/Content/js/widgets/studentFilterWidget.js"> </script>
+        <script src="~/Content/js/widgets/studentListWidget.js"> </script>
+        <script src="~/Content/js/widgets/groupListWidget.js"> </script>
+        <script src="~/Content/js/widgets/multipleGroupEditTopbarWidget.js"> </script>
+
+        <script src="~/Content/js/multipleGroupEditMain.js"> </script>
+        
+	</body>	
+</html>

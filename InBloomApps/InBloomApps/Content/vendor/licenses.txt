@@ -1,0 +1,13 @@
+antiscroll - License: MIT https://github.com/LearnBoost/antiscroll
+twitter bootstrap - License: APLv2 https://github.com/twitter/bootstrap/blob/master/LICENSE
+dateutils - https://github.com/JerrySievert/node-date-utils/blob/master/LICENSE
+jquery file upload License: MIT https://github.com/blueimp/jQuery-File-Upload
+idletimer - License: MIT https://github.com/mikesherov/jquery-idletimer/blob/master/LICENSE-MIT
+jqplot - License: MIT http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+jquery - License: MIT https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+jqueryui - License: MIT https://github.com/jquery/jquery-ui/blob/master/MIT-LICENSE.txt
+jqueryui multidraggable - License: MIT http://www.myphpetc.com/2009/11/jquery-ui-multiple-draggable-plugin.html
+pubsub - License: MIT https://github.com/federico-lox/pubsub.js/blob/master/LICENSE.md
+select2 - License: APLv2 https://github.com/ivaynberg/select2/blob/master/LICENSE
+spin - License: MIT http://fgnass.github.com/spin.js/
+underscore - License: https://github.com/documentcloud/underscore/blob/master/LICENSE

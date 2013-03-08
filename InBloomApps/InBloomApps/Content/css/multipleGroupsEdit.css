@@ -1,0 +1,689 @@
+/*
+ * Copyright 2012-2013 inBloom, Inc. and its affiliates.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.main-content {
+    opacity: 0.2;
+    min-width:1280px;
+}
+
+#txtRandomNumInGroup{
+	width:80px;
+	background-color: #8EB4E3;
+	height:30px;
+	margin-top:10px;
+}
+
+.hide-button {
+    float: right;
+    margin-top: -33px;
+    font-size: 11px;
+    font-family: helvetica;
+    color: gray;
+    display: none;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.multidraggable {
+    z-index: 100;
+}
+
+/**********************
+ * TOP BAR
+ *********************/
+.tooltip-inner {
+    z-index:2;
+}
+
+.top-bar-controls {
+    margin-bottom:0;
+	width:auto;
+    background: #D7E4BD;
+    min-width:1280px;
+}
+
+.top-bar-rows {
+    height:2.3em;
+}
+
+.top-bar-img-btn {
+	width: 1.8em;
+    cursor: pointer;
+}
+
+#img-help-btn {
+    width: 2.1em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    cursor:pointer;
+    color:white;
+}
+
+.top-bar-divider {
+    width: 1.5em;
+    float:right;
+}
+
+.top-bar-buttons {
+    text-align: right;
+}
+
+#logout-btn{
+	color:white;
+    cursor:pointer; 
+    vertical-align:middle;
+}
+
+#student-controls {
+    margin-left:0.2em;
+	margin-bottom: 0.6em;
+}
+
+#random-num-txt{
+	margin:-0.2em 0 0 0;
+	padding:0;
+	height:1.4em;
+	width:100%;
+	font-size:0.9em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/**********************
+ * STUDENT LIST
+ *********************/
+
+#select-all-btn {
+    width:45%;
+}
+
+#clear-selection-btn {
+    width:55%;
+}
+
+#random-num-btn {
+    width:25px;
+}
+
+.sidebar {
+	height:100%
+}
+
+.sidebar-row {
+	height:100%;
+    position:relative;
+}
+
+#searchBox {
+    position:relative;
+}
+
+#txtStudentSearchBox {
+    width:90%;
+}
+
+#search-student-icon {
+    width: 1.5em;
+    position: absolute;
+    margin-left: -2em;
+    cursor: pointer;
+}
+
+#studentList {
+	list-style: none;
+	margin:0;
+    width:100%;
+}
+
+#studentListDiv {
+    box-shadow: 0.2em 0.1em 1em #CCC;
+    padding: 1em 0.2em 0em 0.6em;
+    height: 100%;
+    width: 100%;
+}
+
+.student-list-inner {
+    padding-right: 0.6em;
+}
+
+.box-wrap {
+    width: 100%;
+    height: 95%;
+}
+
+.box, .box .antiscroll-inner {
+        width: 100%;
+        height: 100%;
+        font: 14px Helvetica, Arial;
+      }
+
+.studentListItem {
+	min-height: 4.2em;
+	background-color: #F2F2F2;
+    margin: 0.8em auto auto auto;
+	padding:0.8em 0.4em 0 0;
+	font-size:0.9em;
+    position:relative;
+}
+
+.studentListItem-selected {
+	background-color: #BFBFBF;
+	color: white;
+}
+
+.student-container {
+    position: relative;
+    display:inline-block;
+    vertical-align:top;
+    width:60%;
+}
+
+.student-name {
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.student-selBox {
+	float:right;
+}
+
+.student-info-btn {
+	position: absolute;
+    float: right;
+    left: 90%;
+    top: 2em;
+    width: 2.5em;
+    cursor: pointer;
+}
+
+.studentListItem:hover .student-info-btn {
+	display:inline;
+}
+
+.group-indicators {
+	min-width:1em;
+	min-height:1em;
+    display:inline-block;
+}
+
+.student-icon-div {
+    display:inline-block;
+    vertical-align: top;
+}
+
+.student-icon {
+	float:left;
+	width: 3em;
+}
+
+/**********************
+ *CONTENT
+ *********************/
+.content {
+    height:100%;
+    padding-top: 1em;
+}
+
+.content-row {
+    position:relative;
+    height:100%;
+}
+
+.groups-area {
+    z-index: 1;
+	top:5em;	
+    bottom: 0;
+    padding-top:5em;
+    padding-left:2.8em;
+    width: 97% !important;
+    overflow-y: auto;
+    position:absolute;
+}
+
+/**********************
+ * STUDENT LEARNING STYLES CHART
+ *********************/
+#student-learningStyle-chart{
+	color:white; 
+	font-size:0.7em;
+	width:250px;
+	height:250px;
+}
+
+/**********************
+ * STUDENT IN GROUP
+ *********************/
+.dropped-elem .del-button{
+	width:1.5em;
+    float: right;
+    display:none;
+}
+
+.dropped-elem.expanded .del-button {
+	margin-top:-1.0em;
+}
+
+.dropped-elem.collapsed .del-button {
+	margin-top:-1.5em;
+}
+
+.dropped-elem:hover .del-button {
+    display: block;
+}
+
+.dropped-elem {
+	background-color: #F2F2F2;
+	border:1px solid #CCC;	
+	margin:0.5em auto auto auto;
+	position:relative;
+}
+
+.dropped-elem.expanded {
+	width: 80%;
+	min-height:4em;
+    position:relative;
+}
+
+.dropped-elem.collapsed {
+	display:inline-block;
+	padding:0.5em;
+	margin-left:1em;
+	margin-right:0.5em;
+}
+
+.dropped-elem.expanded .student-name {
+	margin-left:3.7em;
+	font-size:0.8em;
+}
+
+.dropped-elem.collapsed .student-name {
+	font-size:0.8em;
+}
+
+.dropped-elem .student-attributes {
+	margin-left:3.7em;
+    margin-bottom:1.3em;
+	font-size:0.8em;
+}
+
+.dropped-elem.expanded .student-icon{
+	position:absolute;
+	top:20%;
+}
+
+.dropped-elem.collapsed .student-icon {
+	display:none;
+}
+
+.dropped-elem.expanded .student-full-profile {
+    float:right;    
+    display:none;    
+    font-size:0.8em;
+    position: absolute;
+    bottom: 0;
+    right: 0.5em;
+}
+
+.dropped-elem.collapsed .student-full-profile {
+    display:none;
+}
+
+.dropped-elem.expanded:hover .student-full-profile {
+    display: block;
+}
+
+.circle
+{
+    height: 12px;
+    width: 12px;
+	box-shadow: 2px 2px 1px #888888;
+    display: block;
+    border-radius: 8px;
+}
+
+
+.filter-topbar {
+	height: 3em;
+}
+
+/**********************
+ * STUDENT INFO POPOVER
+ *********************/
+#student-info-popover {
+	margin: 0em 0 0 0.37em;	
+	padding:0.8em 0.5em 0 1em;	
+	color:white;
+	background-color: #BFBFBF;
+	position:absolute;
+    z-index: 99;
+}
+
+/**********************
+ * GROUPS 
+ *********************/
+.group-top-container {
+	margin: 2em 2em 4em 2em;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.group-popover .antiscroll-scrollbar-vertical {
+    background:white !important;
+}
+
+.group-container {
+    padding-right: 0.5em;
+	border-radius: 0.8em;	
+	width: 20em;
+    float:left;
+}
+
+.group-container:hover .group-controls {
+	display:block;
+}
+
+.group-container:hover .group-info-btn {
+    display: block;
+}
+
+.group-info-btn {
+    margin-top: -2.6em;
+    margin-left: 24em;
+    width: 3.5em;
+    cursor: pointer;
+    position: absolute;
+}
+
+.group-container:hover .group-close-btn {
+	display:block;
+}
+.group-close-btn {
+	margin-left: -1.1em;
+    margin-top: -1.7em;
+    width: 2.5em;
+    cursor: pointer;
+    position: absolute;
+}
+
+.group-name {	
+	height:2.5em;
+	text-align: center;
+	margin:-2em auto auto auto;	
+	width: 11em;
+	color:white;
+}
+
+.group-name-lbl {	
+	line-height:2.5em;
+}
+
+.group-name-text {
+	display:none;
+	text-align:center;
+}
+
+.group-controls {	
+	display:none;
+	text-align: center;
+	margin:-4em auto auto auto;
+	width:100%;
+	float:left;
+}
+
+.group-wrap {
+    height:15em;    
+	padding-top: 0.3em;
+    margin: 1em 0.5em 0.5em 0.5em;
+    overflow:visible !important;
+}
+
+.student-data-wrap {
+	height:90%;
+}
+
+.group {
+	padding-top: 0.5em;
+}
+
+.group-download-img, .group-attachment-img, .group-printer-img {
+    cursor: pointer;
+    width: 1.8em;
+    float:left;
+}
+
+.group-download-img {
+    margin-left:1em;
+    margin-right: 0.2em;
+    width: 1.5em;
+    margin-top: 0.1em;
+}
+
+.group-num-students-badge {
+    position:absolute;
+    left:46%;
+    margin-top:0.5em;
+}
+
+.group-file-attachment {
+	display:none;
+    clear:both;
+	background: url('../img/attachment-paper-small.png') no-repeat;
+	background-size: 100% 100%;
+	height:3.0em;
+	padding-top:1.5em;
+	padding-left:2em;
+	padding-right:1em;
+    margin-right:-0.65em;
+}
+
+.del-attachment-img {
+	float:right;
+	width:1em;
+	cursor: pointer;
+}
+
+
+/**********************
+ * STUDENT DATA POPUP 
+ *********************/
+.add-data-button {	
+	float:right;
+}
+
+.group-popover {
+    float:left;
+	color:white;
+	background-color:black;
+	opacity: 0.7;
+	border-radius: 0.8em;	
+	overflow-y:auto;
+    overflow-x:hidden;
+    z-index: 2; /*1 more than the groups-area*/
+}
+
+#student-data-popover {
+}
+
+.student-data-popover-txt {
+    text-align:center;
+}
+
+.cbox-student-attribute {
+    margin-top: -0.15em !important;
+    margin-right: 0.2em !important;
+}
+
+.student-elements-list {
+	list-style: none;
+}
+
+/**********************
+ * GROUP DESC POPUP 
+ *********************/
+.group-description-lbl {
+    padding:0 0.5em 0 0.5em;	
+}
+
+.group-description-text {
+    word-wrap: break-word;
+	padding:0 0.5em 0 0.5em;	
+}
+
+.group-description-textarea {
+	color:white;
+	display:none;
+	background-color:transparent;
+	border:0;
+	width: 90%;
+    padding:0 0.5em 0 0.5em;
+}
+
+/**********************
+ * GROUP ATTACH POPUP 
+ *********************/
+.group-attachment-popover{
+	padding:0.5em 0.7em 0 0.5em;
+	width: 19em;
+	color:white;
+	background-color:black;
+	opacity: 0.7;
+	border-radius: 0.8em;	
+    clear:both;
+    z-index: 2; /*1 more than the groups-area*/
+}
+
+.attachment-done-btn{
+	float:right;
+	color:white;
+	background-color:transparent;
+	border-color:white;
+	border-width: 0.08em;
+	border-radius: 0.4em;
+	width:4.5em;
+}
+
+.real-upload-txt {
+    position:absolute;
+    top:10;
+    left:0em;
+
+    /* start of transparency styles */
+    opacity:0;
+    -moz-opacity:0;
+    filter:alpha(opacity:0);
+    /* end of transparency styles */
+
+    z-index:2; /* bring the real upload interactivity up front */
+    width:20em;
+}
+
+.fake-upload-txt{
+	height:1em;
+	width:15em;
+	background-color:transparent;
+	border-color:white;
+	color:white;
+}
+
+.attachment-img {
+	margin-top:-0.5em;
+	width: 1.8em;
+}
+
+.fakeupload {
+	margin-top:0.8em;
+    position:relative;
+}
+
+/**********************
+ * UNSAVED CHANGES MODAL
+ *********************/
+#group-unsaved-changes-group-name {
+	font-weight: bold;	
+}
+
+/**********************
+ * SAVE ALL MODAL
+ *********************/
+.save-all-msg {
+    color: white;
+}
+
+/**********************
+ * TOP BAR
+ *********************/
+#filter-attribute {
+	width: 100%;
+}
+
+#filter-operator {
+	width: 100%;
+}
+
+#filter-value {
+	width:100%;
+}
+
+#filter-values {
+    width:100%;
+}
+
+.selected-filter{
+	-webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background-color: #e4e4e4;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -ms-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  -moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  color: #333;
+  border: 1px solid #aaaaaa;
+  line-height: 13px;
+  padding: 3px 5px 3px 18px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+  cursor: default;
+  display:inline-block
+}
+
+.select2-input {
+	height:1.0em !important; 
+}
+
+#selected-filters.select2-choices{
+	border:0;
+}
+
+.tooltip {
+    z-index: 2;
+}

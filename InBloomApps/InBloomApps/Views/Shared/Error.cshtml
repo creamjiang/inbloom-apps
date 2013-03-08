@@ -1,0 +1,21 @@
+﻿<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Student Grouping Tool</title>
+    <script src="~/Content/vendor/jquery/js/jquery.min.js"> </script>
+    <script>
+        function logout() {
+            $.ajax({
+                url: 'Logout',
+                success: function () {
+                    window.location = '/';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Error</h2>
+    The following error has occured: @ViewBag.errorMsg . Please click <a href="#" onclick="logout();">here</a> to try again.
+</body>
+</html>

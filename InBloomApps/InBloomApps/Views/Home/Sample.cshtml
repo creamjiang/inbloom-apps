@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Sample";
+}
+
+<h2>Sample</h2>
+@Session["access_token"]
+@*@{ var c = Model.cohorts.Result;}*@
+<ul>
+    @foreach (InBloomApps.Models.CohortDisplayObject cdo in Model)
+    {
+        @*<li>@s.id @s.educationOrgId  @s.cohortIdentifier  @s.cohortType @Html.ActionLink("delete", "DeleteCohort", new { id = @s.id }, new { onclick = "return confirm('are you sure');"})
+
+        </li>*@
+        <li>
+            @cdo.cohort.id @cdo.cohort.cohortIdentifier @cdo.cohort.cohortDescription @cdo.cohort.cohortType @Html.ActionLink("delete", "DeleteCohort", new { id = @cdo.cohort.id })
+            <div>
+                @foreach(var s in cdo.students){
+                       @s                
+                }
+            </div>
+        </li>
+    }
+</ul>
+
+@Html.ActionLink("create cohorts", "CreateCohort", "Home");
+@Html.ActionLink("update cohorts", "UpdateCohort", "Home");
+@Html.ActionLink("abandon session", "AbandonSession", "Home");

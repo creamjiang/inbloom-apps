@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7CECA89-9DFD-42E9-BB46-7CBD6FDB7F57}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InBloomApps</RootNamespace>
+    <AssemblyName>InBloomApps</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="InBloomClient">
+      <HintPath>..\..\InBloomClient\InBloomClient\bin\Debug\InBloomClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Global\JsonLargeResultValueProviderFactory.cs" />
+    <Compile Include="Helper\CohortActionHelper.cs" />
+    <Compile Include="Helper\CohortHelper.cs" />
+    <Compile Include="Helper\ExceptionHelper.cs" />
+    <Compile Include="Helper\FTPHelper.cs" />
+    <Compile Include="Helper\GlobalHelper.cs" />
+    <Compile Include="Helper\FilterHelper.cs" />
+    <Compile Include="Helper\SectionHelper.cs" />
+    <Compile Include="Helper\StudentHelper.cs" />
+    <Compile Include="Models\ActionResponseResult.cs" />
+    <Compile Include="Models\CohortActionObject.cs" />
+    <Compile Include="Models\CohortDisplayObject.cs" />
+    <Compile Include="Models\CohortCustom.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\DataElement.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\FilterValue.cs" />
+    <Compile Include="Models\FtpFile.cs" />
+    <Compile Include="Models\GroupingDisplayObject.cs" />
+    <Compile Include="Models\LessonPlan.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\SectionDisplayObject.cs" />
+    <Compile Include="Models\StudentDisplayObject.cs" />
+    <Compile Include="Models\ViewDataUploadFilesResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\css\core.css" />
+    <Content Include="Content\css\groupSelection.css" />
+    <Content Include="Content\css\landingPage.css" />
+    <Content Include="Content\css\multipleGroupsEdit.css" />
+    <Content Include="Content\img\add-icon.png" />
+    <Content Include="Content\img\attachment-icon.png" />
+    <Content Include="Content\img\attachment-paper-small.png" />
+    <Content Include="Content\img\attachment-paper.png" />
+    <Content Include="Content\img\divider-icon.png" />
+    <Content Include="Content\img\download-icon.png" />
+    <Content Include="Content\img\group-close-icon.png" />
+    <Content Include="Content\img\group-edit-icon.png" />
+    <Content Include="Content\img\group-info-icon.png" />
+    <Content Include="Content\img\help-icon.png" />
+    <Content Include="Content\img\inbloom-logo.png" />
+    <Content Include="Content\img\printer-icon.png" />
+    <Content Include="Content\img\save-icon.png" />
+    <Content Include="Content\img\search-icon.png" />
+    <Content Include="Content\img\sel-group-indicator-icon.png" />
+    <Content Include="Content\img\student-close-icon.png" />
+    <Content Include="Content\img\student-icon-female.png" />
+    <Content Include="Content\img\student-icon-female2.png" />
+    <Content Include="Content\img\student-icon-female3.png" />
+    <Content Include="Content\img\student-icon-male.png" />
+    <Content Include="Content\img\student-icon-male2.png" />
+    <Content Include="Content\img\student-icon-male3.png" />
+    <Content Include="Content\img\trash-icon.png" />
+    <Content Include="Content\js\groupSelectionMain.js" />
+    <Content Include="Content\js\models\groupListModel.js" />
+    <Content Include="Content\js\models\groupModel.js" />
+    <Content Include="Content\js\models\sectionModel.js" />
+    <Content Include="Content\js\models\studentFiltersModel.js" />
+    <Content Include="Content\js\models\studentModel.js" />
+    <Content Include="Content\js\multipleGroupEditMain.js" />
+    <Content Include="Content\js\utils\tooltipText.js" />
+    <Content Include="Content\js\utils\utils.js" />
+    <Content Include="Content\js\widgets\groupDetailsWidget.js" />
+    <Content Include="Content\js\widgets\groupListItemWidget.js" />
+    <Content Include="Content\js\widgets\groupListWidget.js" />
+    <Content Include="Content\js\widgets\groupSelectionTopbarWidget.js" />
+    <Content Include="Content\js\widgets\groupWidget.js" />
+    <Content Include="Content\js\widgets\multipleGroupEditTopbarWidget.js" />
+    <Content Include="Content\js\widgets\sectionListWidget.js" />
+    <Content Include="Content\js\widgets\sectionWidget.js" />
+    <Content Include="Content\js\widgets\studentFilterWidget.js" />
+    <Content Include="Content\js\widgets\studentInGroupWidget.js" />
+    <Content Include="Content\js\widgets\studentListItemWidget.js" />
+    <Content Include="Content\js\widgets\studentListWidget.js" />
+    <Content Include="Content\static\User Guide HTML_files\colorschememapping.xml" />
+    <Content Include="Content\static\User Guide HTML_files\filelist.xml" />
+    <Content Include="Content\static\User Guide HTML_files\image001.png" />
+    <Content Include="Content\static\User Guide HTML_files\image002.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image003.png" />
+    <Content Include="Content\static\User Guide HTML_files\image004.png" />
+    <Content Include="Content\static\User Guide HTML_files\image005.png" />
+    <Content Include="Content\static\User Guide HTML_files\image006.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image007.png" />
+    <Content Include="Content\static\User Guide HTML_files\image008.png" />
+    <Content Include="Content\static\User Guide HTML_files\image009.png" />
+    <Content Include="Content\static\User Guide HTML_files\image010.png" />
+    <Content Include="Content\static\User Guide HTML_files\image011.png" />
+    <Content Include="Content\static\User Guide HTML_files\image012.png" />
+    <Content Include="Content\static\User Guide HTML_files\image013.png" />
+    <Content Include="Content\static\User Guide HTML_files\image014.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image015.png" />
+    <Content Include="Content\static\User Guide HTML_files\image016.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image017.png" />
+    <Content Include="Content\static\User Guide HTML_files\image018.png" />
+    <Content Include="Content\static\User Guide HTML_files\image019.png" />
+    <Content Include="Content\static\User Guide HTML_files\image020.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image021.png" />
+    <Content Include="Content\static\User Guide HTML_files\image022.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image023.png" />
+    <Content Include="Content\static\User Guide HTML_files\image024.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image025.png" />
+    <Content Include="Content\static\User Guide HTML_files\image026.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image027.png" />
+    <Content Include="Content\static\User Guide HTML_files\image028.png" />
+    <Content Include="Content\static\User Guide HTML_files\image029.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image030.png" />
+    <Content Include="Content\static\User Guide HTML_files\image031.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image032.png" />
+    <Content Include="Content\static\User Guide HTML_files\image033.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image034.png" />
+    <Content Include="Content\static\User Guide HTML_files\image035.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image036.png" />
+    <Content Include="Content\static\User Guide HTML_files\image037.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image038.png" />
+    <Content Include="Content\static\User Guide HTML_files\image039.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image040.png" />
+    <Content Include="Content\static\User Guide HTML_files\image041.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image042.png" />
+    <Content Include="Content\static\User Guide HTML_files\image043.png" />
+    <Content Include="Content\static\User Guide HTML_files\image044.png" />
+    <Content Include="Content\static\User Guide HTML_files\image045.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image046.png" />
+    <Content Include="Content\static\User Guide HTML_files\image047.png" />
+    <Content Include="Content\static\User Guide HTML_files\image048.png" />
+    <Content Include="Content\static\User Guide HTML_files\image049.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image050.png" />
+    <Content Include="Content\static\User Guide HTML_files\image051.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image052.png" />
+    <Content Include="Content\static\User Guide HTML_files\image053.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image054.png" />
+    <Content Include="Content\static\User Guide HTML_files\image055.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image056.png" />
+    <Content Include="Content\static\User Guide HTML_files\image057.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image058.png" />
+    <Content Include="Content\static\User Guide HTML_files\image059.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image060.png" />
+    <Content Include="Content\static\User Guide HTML_files\image061.png" />
+    <Content Include="Content\static\User Guide HTML_files\image062.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image063.png" />
+    <Content Include="Content\static\User Guide HTML_files\image064.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image065.png" />
+    <Content Include="Content\static\User Guide HTML_files\image066.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image067.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image068.png" />
+    <Content Include="Content\static\User Guide HTML_files\image069.png" />
+    <Content Include="Content\static\User Guide HTML_files\image070.jpg" />
+    <Content Include="Content\static\User Guide HTML_files\image071.png" />
+    <Content Include="Content\vendor\antiscroll\css\antiscroll.css" />
+    <Content Include="Content\vendor\antiscroll\js\antiscroll.js" />
+    <Content Include="Content\vendor\antiscroll\js\jquery-mousewheel.js" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\vendor\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\dateutils\js\dateUtils.min.js" />
+    <Content Include="Content\vendor\fileupload\css\jquery.fileupload-ui.css" />
+    <Content Include="Content\vendor\fileupload\js\jquery.fileupload-fp.js" />
+    <Content Include="Content\vendor\fileupload\js\jquery.fileupload-ui.js" />
+    <Content Include="Content\vendor\fileupload\js\jquery.fileupload.js" />
+    <Content Include="Content\vendor\fileupload\js\jquery.iframe-transport.js" />
+    <Content Include="Content\vendor\idletimer\js\idletimer.js" />
+    <Content Include="Content\vendor\jqplot\css\jquery.jqplot.min.css" />
+    <Content Include="Content\vendor\jqplot\js\jqplot.donutRenderer.min.js" />
+    <Content Include="Content\vendor\jqplot\js\jqplot.pieRenderer.min.js" />
+    <Content Include="Content\vendor\jqplot\js\jquery.jqplot.min.js" />
+    <Content Include="Content\vendor\jqueryui\js\jquery-ui.min.js" />
+    <Content Include="Content\vendor\jquery\js\jquery.min.js" />
+    <Content Include="Content\vendor\multidraggable\js\jquery.ui.multidraggable.js" />
+    <Content Include="Content\vendor\pubsub\js\pubsub.js" />
+    <Content Include="Content\vendor\select2\css\select2.css" />
+    <Content Include="Content\vendor\select2\css\select2.png" />
+    <Content Include="Content\vendor\select2\css\select2x2.png" />
+    <Content Include="Content\vendor\select2\css\spinner.gif" />
+    <Content Include="Content\vendor\select2\js\select2.min.js" />
+    <Content Include="Content\vendor\spin\js\jquery.spin.js" />
+    <Content Include="Content\vendor\spin\js\spin.min.js" />
+    <Content Include="Content\vendor\underscore\js\underscore.min.js" />
+    <Content Include="Data\Colors.txt" />
+    <Content Include="Data\DataElements.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Sample.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Timeout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PermissionError.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Student.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\static\User Guide HTML_files\themedata.thmx" />
+    <None Include="Properties\PublishProfiles\grouptest - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\grouptest - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\grouptest - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\grouptest - Web Deploy.pubxml" />
+    <Content Include="Views\Shared\LoginError.cshtml" />
+    <Content Include="Views\Home\Group.cshtml" />
+    <Content Include="Views\Home\MultipleGroupsEdit.cshtml" />
+    <Content Include="Views\Home\GroupSelection.cshtml" />
+    <Content Include="Content\static\UserGuide.htm" />
+    <Content Include="Views\Home\LandingPage.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54097</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49560/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
