@@ -175,6 +175,10 @@
     <Content Include="Content\img\student-icon-male2.png" />
     <Content Include="Content\img\student-icon-male3.png" />
     <Content Include="Content\img\trash-icon.png" />
+    <Content Include="Content\js\common\inBloomHeader.js" />
+    <Content Include="Content\js\common\userInactivityModal.js" />
+    <Content Include="Content\js\config\groupSelection.js" />
+    <Content Include="Content\js\config\main.js" />
     <Content Include="Content\js\groupSelectionMain.js" />
     <Content Include="Content\js\models\groupListModel.js" />
     <Content Include="Content\js\models\groupModel.js" />
@@ -272,6 +276,7 @@
     <Content Include="Content\vendor\antiscroll\css\antiscroll.css" />
     <Content Include="Content\vendor\antiscroll\js\antiscroll.js" />
     <Content Include="Content\vendor\antiscroll\js\jquery-mousewheel.js" />
+    <Content Include="Content\vendor\backbone\backbone.min.js" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
@@ -286,6 +291,9 @@
     <Content Include="Content\vendor\fileupload\js\jquery.fileupload-ui.js" />
     <Content Include="Content\vendor\fileupload\js\jquery.fileupload.js" />
     <Content Include="Content\vendor\fileupload\js\jquery.iframe-transport.js" />
+    <Content Include="Content\vendor\handlebars\handlebars.js" />
+    <Content Include="Content\vendor\handlebars\mustache.js" />
+    <Content Include="Content\vendor\handlebars\text.js" />
     <Content Include="Content\vendor\idletimer\js\idletimer.js" />
     <Content Include="Content\vendor\jqplot\css\jquery.jqplot.min.css" />
     <Content Include="Content\vendor\jqplot\js\jqplot.donutRenderer.min.js" />
@@ -295,6 +303,7 @@
     <Content Include="Content\vendor\jquery\js\jquery.min.js" />
     <Content Include="Content\vendor\multidraggable\js\jquery.ui.multidraggable.js" />
     <Content Include="Content\vendor\pubsub\js\pubsub.js" />
+    <Content Include="Content\vendor\require\require.min.js" />
     <Content Include="Content\vendor\select2\css\select2.css" />
     <Content Include="Content\vendor\select2\css\select2.png" />
     <Content Include="Content\vendor\select2\css\select2x2.png" />
@@ -341,6 +350,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\static\User Guide HTML_files\themedata.thmx" />
+    <Content Include="Content\templates\footer.hbs" />
+    <Content Include="Content\templates\header.hbs" />
+    <Content Include="Content\templates\showMoreDataModal.hbs" />
+    <Content Include="Content\templates\userInactivityModal.hbs" />
     <None Include="Properties\PublishProfiles\grouptest - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\grouptest - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\grouptest - Web Deploy %282%29.pubxml" />
